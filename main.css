@@ -1,0 +1,9 @@
+/* Main stylesheet for index.html */
+fieldset select {
+	font-family: sanserif;
+	font-size: 18px;
+	line-height: 5px;
+	padding: 10px;
+	min-width: 150px;
+	
+}
