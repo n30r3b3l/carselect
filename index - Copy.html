@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Sources for Bootstrap-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!--End Bootstrap-->
+
+
+<title></title>
+<meta name="" content="">
+</head>
+<body style="margin:10px; padding: 10px;">
+	<div class="container" name="quote">
+	  <div class="row">
+	    <fieldset class="col-lg-4" name="carSelection">
+		  <div>
+		    <table cellspacing="5">
+		    <tr>
+			<td><label for="selectYear">Year: </label></td>
+			<td><select name="selectYear" id="year"><option value="">Select a Year</option></select></td>
+			</tr>
+			<tr>
+			<td><label for="selectMake">Make: </label></td>
+			<td><select name="selectMake" id="make"><option value="">----</select></td>
+			</tr>
+			<tr>
+			<td><label for="selectModel">Model: </label></td>
+			<td><select name="selectModel" id="model"></select></td>
+			</tr>
+			<tr>
+			<td><label for="selectTrimr">Trim: </label></td>
+			<td><select name="selectTrim" id="trim"></select></td>	
+			</tr>
+			</table>		
+		  </div>
+		</fieldset>
+		    Pick Up Location: <input type="text" name="selectPickUp" id="pickup"><br>
+			Drop Off Location: <input type="text" name="selectDropOff" id="dropoff"><br>
+			<input style="margin-top: 10px;" id="get-distance" type="button" value="Get Distance" />
+			<input style="margin-top: 10px;" id="cq-get-weight" type="button" value="Get Weight" />
+			<div id="car-mode-weight"></div>
+	  </div>
+	</div>
+	<div class="row" name="DistanceOutput" id="distance-output">
+		
+	</div>
+	<div class="row">
+		<div id="results-body"></div>
+		<div class="col-lg-4" name="Map" id="map-canvas" style="width:350px; height:300px;">
+	</div>
+		
+	</div>
+	<script type="text/javascript" src="testing.js"></script>
+	<script type="text/javascript" src = "edmunds.api.sdk.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC5p2oyR-Zg_FqJBYoSZr-Q3jTbtt12jb8"></script>
+</body>
+</html>
