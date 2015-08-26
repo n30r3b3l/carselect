@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout Test</title>
+  
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="src/bootstrap/dist/css/bootstrap.css">
+  
+</head>
+
+<body>
+<div class="container-fluid">
+	<header class="row">
+		<div class="col-lg-12" style="height: 200px; background-color: gray;">
+		</div>
+	</header>
+	<div class="row" style="margin-top: 50px;">
+		<div class="col-lg-4">
+			<div class="row">
+			<div class="col-lg-8">
+				<div class="panel panel-default" name="quote">
+				<div class="panel-heading"><h1>Get A Quote</h1></div>
+				  <div class="panel-body">
+					<fieldset name="carSelection" class="panel panel-default">		      
+						<table cellspacing="5" cellpadding="5" id="quoteTable">
+							<tr>
+								<td><label for="selectYear">Year: </label></td>
+								<td><select class="form-control" name="selectYear" id="year"></select></td>
+							</tr>
+							<tr>
+								<td><label for="selectMake">Make: </label></td>
+								<td><select class="form-control" name="selectMake" id="make"></select></td>
+							</tr>
+							<tr>
+								<td><label for="selectModel">Model: </label></td>
+								<td><select class="form-control" name="selectModel" id="model"></select></td>
+							</tr>
+							<tr>
+								<td><label for="selectTrim">Trim: </label></td>
+								<td><select class="form-control" name="selectTrim" id="trim"></select></td>	
+							</tr>
+							<tr>
+								<td><label for="selectPickUp">Pick Up</label></td>
+								<td><input class="form-control" type="text" name="selectPickUp" id="pickup"></td>
+							</tr>
+							<tr>
+								<td><label for="selectDropOff">Drop Off</label></td>
+								<td><input class="form-control" type="text" name="selectDropOff" id="dropoff"></td>
+							</tr>
+						</table>		
+					  <!--<br> 
+						Pick Up Location: <input type="text" name="selectPickUp" id="pickup"><br>
+						Drop Off Location: <input type="text" name="selectDropOff" id="dropoff"><br>-->
+						<input style="margin-top: 10px;" id="get-distance" type="button" class="btn btn-default" value="Get Distance" />
+						<input style="margin-top: 10px;" id="cq-get-weight" type="button" class="btn btn-custom btn-lg" value="Get Weight" />
+				</fieldset>
+				<div class=".invisible" id="car-mode-weight"></div>
+				   </div>
+				   </div>
+			</div>
+			   </div>
+		</div>
+		<div class="col-lg-4">
+			<h1 style="text-align: center;">Westberry Auto Transport</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus ornare metus aliquet accumsan. 
+				Etiam placerat augue non diam volutpat aliquet. Praesent blandit maximus sapien ac dignissim. 
+				Vivamus blandit volutpat enim non elementum. Praesent pellentesque vitae risus quis feugiat. Maecenas vel eleifend enim. 
+				Fusce risus lacus, porta vel est et, elementum cursus ipsum. Duis volutpat vel purus sit amet fermentum.
+			</p>
+		</div>
+		<div class="col-lg-4">
+		</div>
+	</div>
+</div>
+</body>

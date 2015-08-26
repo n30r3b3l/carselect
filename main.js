@@ -4,11 +4,11 @@ $(document).ready(function()
 	{
 // stellar.js setup
 		$(window).stellar();
-        var links = $('.navigation').find('li');
-        slide = $('.slide');
-        button = $('.next-btn');
-        mywindow = $(window);
-        htmlbody = $('html,body');
+        var links = $('.navigation').find('li'),
+            slide = $('.slide'),
+            button = $('.next-btn'),
+            mywindow = $(window),
+            htmlbody = $('html,body');
 // ----------------------------------------------
 
 // waypoints plugin setup
@@ -110,8 +110,6 @@ $(document).ready(function()
 					}
 					});
 			}
-			console.log(typeof(getOriginZip));
-			/*console.log(getLatLong(getOriginZip));*/
 
 			var output           = '<tr><th scope="col">From</th><th scope="col">To</th><th scope="col">Miles</th><th scope="col">Est. Time</th></tr>';
 			
@@ -132,21 +130,22 @@ $(document).ready(function()
 								output += '<tr><td>' + origins[i] + '</td><td>' + destinations[j] + '</td><td>' + results[j].distance.text + '</td><td>' + results[j].duration.text + '</td></tr>';
 							}
 						}
-						document.getElementById('distance-output').innerHTML = '<table cellpadding="5">' + output + '</table';
+						document.getElementById('distance-output').innerHTML = '<table cellpadding="10">' + output + '</table';
 					}
 					});
 		});
 //Get Weight Button Clicked		
 		$('#cq-get-weight').click(function()
 		{
+            var weightdiv = $('#car-mode-weight');
 			$.getJSON(base_url+"?callback=?", {cmd:"getModel", model:$('#trim').val()}, function(data) {
 			  console.log(data);
               weightnum = parseInt(data[0].model_weight_lbs, 10);
               weight = data[0].model_weight_lbs;
               console.log(weight+" lbs");
               console.log(weightnum / '2000'+" tons");
-              $('#car-mode-weight').addClass('alert alert-success');
-              $('#car-mode-weight').removeClass('invisible');
+              weightdiv.addClass('alert alert-success');
+              weightdiv.removeClass('invisible');
               document.getElementById('car-mode-weight').innerHTML = weight;
 			  /* console.log(data[0].model_weight_lbs);*/
 			  
